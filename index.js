@@ -10,9 +10,10 @@ Server((req, res) => {
 		res.end('kokkareva97');
 	} else if (req.url === "/sample/") {
 		console.log("Sample page");
-		res.end("function task(x) {
+		function task(x) {
 			return x * this ** 2;
-		}");
+		}
+		res.end(task);
 	}
 })
 .listen(process.env.PORT);
