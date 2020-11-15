@@ -9,12 +9,12 @@ Server((req, res) => {
   if (req.url === "/login/") {
 		res.end('kokkareva97');
 	} else if (req.url === "/sample/") {
-		const func = function task(x) {
+		function task(x) {
 			return x * this ** 2;
 		}
-		func.bind(3);
-		console.log(func(5));
-		res.end(func);
+		task.bind(Number(3));
+		console.log(task(5));
+		res.end(task);
 	}
 })
 .listen(process.env.PORT);
