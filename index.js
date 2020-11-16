@@ -10,7 +10,7 @@ Server((req, res) => {
 		res.end("kokkareva97");
 	} else if (req.url === "/sample/") {
     function task(x) {
-      return x * this ** 2;
+      return x * (this ** 2);
     }
 		res.end(task.toString());
 	}
