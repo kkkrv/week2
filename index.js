@@ -24,5 +24,12 @@ Server((req, res) => {
           res.end();
       });
   }
+   else if (req.url === "/promise/") {
+      function task(x) {
+        const pr = x => new Promise((res,reg) => (x < 18) ? res('yes') : rej('no'));
+        return pr;
+      }
+      res.end(task.toString());
+  }
 })
 .listen(process.env.PORT);
