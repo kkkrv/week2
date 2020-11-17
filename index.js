@@ -14,7 +14,7 @@ Server((req, res) => {
       }
       res.end(task.toString());
   } else if (req.url === "/fetch/") {
-      fs.readFile('./index.html', null, function (error, data) {
+      fs.readFile('./fetch.html', null, function (error, data) {
           if (error) {
               res.writeHead(404);
               res.write('Whoops! File not found!');
