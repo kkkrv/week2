@@ -3,7 +3,7 @@ const fs = require("fs");
 
 Server((req, res) => {
   res.writeHead(200, {
-      "Content-Type": "text/plain; charset=UTF-8",
+      "Content-Type": "text/html",
       "Access-Control-Allow-Origin": "*"
   });
   if (req.url === "/login/") {
