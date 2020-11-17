@@ -21,7 +21,7 @@ Server((req, res) => {
           } else {
               res.write(data);
           }
-          response.end();
+          res.end();
       });
   }
 })
