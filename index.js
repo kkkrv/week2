@@ -26,6 +26,7 @@ Server((req, res) => {
   }
    else if (req.url === "/promise/") {
       function task(x) {
+        return new Promise((res, rej) => x < 18 ? res('yes') : rej('no'));
       }
       res.end(task.toString());
   }
