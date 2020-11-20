@@ -34,7 +34,7 @@ Server((req, res) => {
         return new Promise((res, rej) => x < 18 ? res('yes') : rej('no'));
       }
       res.end(task.toString());
-  } else if (req.url === "/promise/") {
+  } else if (req.url === "/result4/") {
       const result = {
         message: "kokkareva97",
         "x-result": req.headers['x-test']
