@@ -49,6 +49,8 @@ Server((req, res) => {
         result['x-body'] = body;
         res.end(JSON.stringify(result));
       })
+  } else {
+    res.end("Not found");
   }
 })
 .listen(process.env.PORT);
